@@ -7,3 +7,13 @@ feature "Entering player names" do
     expect(page).to have_content("Clive vs. Susan")
   end
 end
+
+feature "Viewing hit points" do
+  scenario "allows player 1 to view player 2's hit points" do
+    visit '/'
+    fill_in :player_1, with: 'Clive'
+    fill_in :player_2, with: 'Susan'
+    click_button 'Submit'
+    expect(page).to have_content("Susan: 100 HP")
+  end
+end
