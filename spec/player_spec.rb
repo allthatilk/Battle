@@ -16,18 +16,9 @@ describe Player do
     end
   end
 
-  describe '#attack' do
-    it 'damanages the player' do
-      expect(susan).to receive(:receive_damage)
-      clive.attack(susan)
-    end
-  end
-
-  describe '#receive_damange' do
+  describe '#receive_damage' do
     it 'reduces the player hit points' do
       expect {susan.receive_damage}.to change {susan.hit_points}.by -(described_class::MINUS_HP)
     end
   end
-
-
 end
