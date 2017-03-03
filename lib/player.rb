@@ -10,7 +10,11 @@ class Player
     @hit_points = HP_MAX
   end
 
-  def attack
+  def attack(player)
+    player.receive_damage
+  end
+
+  def receive_damage
     @hit_points -= MINUS_HP
   end
 end

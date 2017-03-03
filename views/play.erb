@@ -1,6 +1,7 @@
-<h1><%=@player_name_1%> vs. <%=@player_name_2%></h1>
+<h1><%=@player_1.name %> vs. <%=@player_2.name %></h1>
 
-<div> <%=@player_name_2%>: <%= @player_hp_2 %> HP </div>
+<div> <%=@player_1.name%>: <%= @player_1.hit_points %> HP </div>
+<div> <%=@player_2.name%>: <%= @player_2.hit_points %> HP </div>
 
 <form action="/attack">
   <div>
